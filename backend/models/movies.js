@@ -1,9 +1,12 @@
 const mongodb=require('../dbinstance/mongooseinst')
 
-const movies = mongodb.model('Movie', { name: 'String' ,
-rating:'Number', 
+const movies = mongodb.Schema({
+    name:String ,
+    rating:Number, 
 
-                                       
-});
+})
 
-module.exports=movies
+
+
+
+module.exports=mongodb.model('Movie', movies);
