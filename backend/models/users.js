@@ -1,7 +1,11 @@
-const mongodb=require('../dbinstance/mongooseinst')
+// const mongodb=require('../dbinstance/mongooseinst')
+const mongodb = require('mongoose');
 
-const users = mongodb.model('User', { name: 'String' ,
-password:'Number',                          
+const users = mongodb.Schema({
+            name: String,
+            password:Number,                          
 });
 
-module.exports=users
+
+
+module.exports=mongodb.model('User', users);

@@ -1,9 +1,12 @@
-const mongodb=require('../dbinstance/mongooseinst')
+const mongodb = require('mongoose');
 
 const movies = mongodb.Schema({
-    name:String ,
-    rating:Number, 
-
+    Title: String,
+    description: String,
+    genre:String,
+    director:[String],
+    released_at: Date,
+    // actors:mongodb.SchemaTypes.ObjectID
 })
 
 
